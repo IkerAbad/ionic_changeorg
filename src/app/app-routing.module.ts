@@ -20,6 +20,16 @@ const routes: Routes = [
     loadChildren: () => import('./edit-petition/edit-petition.module').then( m => m.EditPetitionPageModule)
   },
 
+  {
+    path: 'register',
+    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
+  },
+
+
 ];
 
 @NgModule({
