@@ -1,12 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { EditSongPageRoutingModule } from './edit-song-routing.module';
-
-import { EditSongPage } from './edit-song.page';
+import { EditPetitionPageRoutingModule } from './edit-petition-routing.module';
+import { EditPetitionPage } from './edit-petition.page';
 
 @NgModule({
   imports: [
@@ -14,8 +11,8 @@ import { EditSongPage } from './edit-song.page';
     FormsModule,
     ReactiveFormsModule ,
     IonicModule,
-    EditSongPageRoutingModule
+    EditPetitionPageRoutingModule
   ],
-  declarations: [EditSongPage]
+  declarations: [EditPetitionPage]
 })
-export class EditSongPageModule {}
+export class EditPetitionPageModule {}

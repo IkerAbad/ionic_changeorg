@@ -1,29 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { SongService } from './../shared/song.service';
+import { PetitionService } from '../shared/petition.service';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  Songs: any = [];
+  Petitions: any = [];
   constructor(
-    private songService: SongService
+    private petitionService: PetitionService
   ) {
   }
   ngOnInit() { }
   ionViewDidEnter() {
-    this.songService.getSongList().subscribe((res) => {
+    this.petitionService.getPetitionList().subscribe((res) => {
       console.log(res)
-      this.Songs = res;
+      this.Petitions = res;
     })
   }
-  deleteSong(song:any, i:number) {
-    if (window.confirm('Do you want to delete the song?')) {
-      this.songService.deleteSong(song._id)
+  deletePetition(petition:any, i:number) {
+    if (window.confirm('Do you want to delete the petition?')) {
+      this.petitionService.deletePetition(petition._id)
         .subscribe(() => {
-          this.Songs.splice(i, 1);
-          console.log('Song deleted!')
+          this.Petitions.splice(i, 1);
+          console.log('Petition deleted!')
         }
         )
     }

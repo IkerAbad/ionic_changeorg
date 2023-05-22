@@ -6,14 +6,16 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { AuthModule } from  './auth/auth.module';
+
 
 import { Storage } from '@ionic/storage'
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,AuthModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [Storage,{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+// ionic serve -l

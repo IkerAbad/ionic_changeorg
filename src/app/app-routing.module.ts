@@ -12,22 +12,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'add-song',
-    loadChildren: () => import('./add-song/add-song.module').then( m => m.AddSongPageModule)
+    path: 'add-petition',
+    loadChildren: () => import('./add-petition/add-petition.module').then( m => m.AddPetitionPageModule)
   },
   {
-    path: 'edit-song/:id',
-    loadChildren: () => import('./edit-song/edit-song.module').then( m => m.EditSongPageModule)
+    path: 'edit-petition/:id',
+    loadChildren: () => import('./edit-petition/edit-petition.module').then( m => m.EditPetitionPageModule)
   },
-  {
-    path: 'register',
-    loadChildren: () => import('./auth/register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
-    path: 'login',
-    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule)
-  },
-
 
 ];
 

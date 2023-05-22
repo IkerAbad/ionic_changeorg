@@ -4,9 +4,9 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AddSongPageRoutingModule } from './add-song-routing.module';
+import { AddPetitionPageRoutingModule } from './add-petition-routing.module';
 
-import { AddSongPage } from './add-song.page';
+import { AddPetitionPage } from './add-petition.page';
 
 @NgModule({
   imports: [
@@ -14,8 +14,8 @@ import { AddSongPage } from './add-song.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    AddSongPageRoutingModule
+    AddPetitionPageRoutingModule
   ],
-  declarations: [AddSongPage]
+  declarations: [AddPetitionPage]
 })
-export class AddSongPageModule {}
+export class AddPetitionPageModule {}

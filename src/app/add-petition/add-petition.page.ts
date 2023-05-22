@@ -1,36 +1,36 @@
 import { Component, OnInit, NgZone } from '@angular/core';
-import { SongService } from './../shared/song.service';
+import { PetitionService } from '../shared/petition.service';
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
 
 @Component({
-  selector: 'app-add-song',
-  templateUrl: './add-song.page.html',
-  styleUrls: ['./add-song.page.scss'],
+  selector: 'app-add-petition',
+  templateUrl: './add-petition.page.html',
+  styleUrls: ['./add-petition.page.scss'],
 })
-export class AddSongPage implements OnInit {
-  songForm: FormGroup;
+export class AddPetitionPage implements OnInit {
+  petitionForm: FormGroup;
   constructor(
-    private songAPI: SongService,
+    private petitionAPI: PetitionService,
     private router: Router,
     public fb: FormBuilder,
     private zone: NgZone
   ) {
-    this.songForm = this.fb.group({
-      song_name: [''],
-      artist: ['']
+    this.petitionForm = this.fb.group({
+      title: [''],
+      description: ['']
     })
   }
   ngOnInit() { }
   onFormSubmit() {
-    if (!this.songForm.valid) {
+    if (!this.petitionForm.valid) {
       return false;
     } else {
-      this.songAPI.addSong(this.songForm.value)
+      this.petitionAPI.addPetition(this.petitionForm.value)
         .subscribe((res) => {
           this.zone.run(() => {
             console.log(res)
-            this.songForm.reset();
+            this.petitionForm.reset();
             this.router.navigate(['/home']);
           })
         });
