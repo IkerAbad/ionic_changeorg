@@ -1,6 +1,6 @@
 # ionic_changeorg
 
-App móvil con Ionic y Angular 15 (mayo de 2023, ciclo de DAM) para crear y gestionar peticiones, al estilo de Change.org. Se parte de [ionic-angular-crud-app](https://github.com/IkerAbad/ionic-angular-crud-app). El servidor [node_changeorg_api](https://github.com/IkerAbad/node_changeorg_api) es del mismo proyecto, pero no implementa las rutas de peticiones que esta app llama.
+App móvil con Ionic y Angular 15 (mayo de 2023, ciclo de DAM) para crear y gestionar peticiones, al estilo de Change.org. Se parte de [ionic-angular-crud-app](https://github.com/IkerAbad/ionic-angular-crud-app). Su servidor es [backend_ionic_changeorg](https://github.com/IkerAbad/backend_ionic_changeorg).
 
 ## Qué hay
 
@@ -12,7 +12,7 @@ App móvil con Ionic y Angular 15 (mayo de 2023, ciclo de DAM) para crear y gest
 
 ## Cómo probarla
 
-Hace falta un servidor en `http://localhost:3000` con las rutas `/api/create-petition`, etc. (la dirección está escrita en `auth.service.ts` y `petition.service.ts`); no hay ninguno en estos repositorios que las cubra. Luego:
+Hace falta el servidor en `http://localhost:3000` (la dirección está escrita en `auth.service.ts` y `petition.service.ts`). Ese servidor cubre el CRUD de peticiones, pero no `/login` ni `/register`, que la app también llama. Luego:
 
 ```
 npm ci
@@ -27,7 +27,7 @@ MIT, ver [LICENSE](LICENSE).
 
 # ionic_changeorg (English)
 
-A mobile app with Ionic and Angular 15 (May 2023, DAM vocational course) to create and manage petitions, Change.org style. It starts from [ionic-angular-crud-app](https://github.com/IkerAbad/ionic-angular-crud-app). The server [node_changeorg_api](https://github.com/IkerAbad/node_changeorg_api) belongs to the same project but does not implement the petition routes this app calls.
+A mobile app with Ionic and Angular 15 (May 2023, DAM vocational course) to create and manage petitions, Change.org style. It starts from [ionic-angular-crud-app](https://github.com/IkerAbad/ionic-angular-crud-app). Its server is [backend_ionic_changeorg](https://github.com/IkerAbad/backend_ionic_changeorg).
 
 ## What's inside
 
@@ -39,7 +39,7 @@ A mobile app with Ionic and Angular 15 (May 2023, DAM vocational course) to crea
 
 ## Trying it
 
-You need a server at `http://localhost:3000` with the `/api/create-petition` etc. routes (the address is hardcoded in `auth.service.ts` and `petition.service.ts`); none of these repositories covers them. Then:
+You need the server at `http://localhost:3000` (the address is hardcoded in `auth.service.ts` and `petition.service.ts`). That server covers the petitions CRUD, but not `/login` or `/register`, which the app also calls. Then:
 
 ```
 npm ci
